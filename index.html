@@ -6,11 +6,61 @@
   <title>KRK Sourcing</title>
   <style>
     body {
-      font-family: 'Times new roman', serif;
+      font-family: 'Times New Roman', serif;
       margin: 0;
       padding: 0;
       background-color: #f9f6f0;
       color: #3d3d3d;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('image4.jpeg'); 
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      margin: 10px 0 20px;
+    }
+    .hero-content .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #3d3d3d;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+    .hero-content .btn:hover {
+      background-color: #555;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
     }
     .section {
       display: flex;
@@ -55,16 +105,15 @@
   </style>
 </head>
 <body>
-  <header class="section">
-    <div class="text-content">
-      <h1>Welcome to KRK Sourcing</h1>
-    </div>
-    <div class="image-content">
-      <img src="image4.jpeg" alt="KRK Sourcing - Welcome">
+  <header class="hero">
+    <div class="hero-content">
+      <p>Welcome to</p>
+      <h1>KRK Sourcing</h1>
+      <a href="#contact" class="btn">Contact Us</a>
     </div>
   </header>
 
-  <section class="section">
+  <section class="section" id="story">
     <div class="image-content">
       <img src="image2.jpeg" alt="Our Story">
     </div>
@@ -76,7 +125,7 @@
     </div>
   </section>
 
-  <section class="section reverse-section">
+  <section class="section reverse-section" id="services">
     <div class="image-content">
       <img src="image1.jpeg" alt="Our Services">
     </div>
@@ -92,7 +141,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="clients">
     <div class="image-content">
       <img src="image3.jpeg" alt="Our Clients">
     </div>
@@ -103,7 +152,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="contact">
     <div class="text-content">
       <h2>Let's Get in Touch</h2>
       <p><strong>KRK Sourcing</strong></p>
